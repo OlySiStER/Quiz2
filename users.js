@@ -47,17 +47,6 @@ function findByFname(req, res) {
         //     result: result
         // });
     });
-    // db.collection("users")
-    //     .find({
-    //             'fname': req.query.fname
-    //         },
-    //         function (err, item) {
-    //             // res.send(item);
-    //             console.log(item);
-    //             res.render('showuser.hbs', {
-    //                 item: item
-    //             });
-    //         });
 };
 
 function findByRole(req, res) {
@@ -72,17 +61,6 @@ function findByRole(req, res) {
         //     result: result
         // });
     });
-    // db.collection("users")
-    //     .findOne({
-    //             'role': req.params.role
-    //         },
-    //         function (err, item) {
-    //             // res.send(item);
-    //             // console.log(item);
-    //             res.render('showuserbyrole.hbs', {
-    //                 item: item
-    //             });
-    //         });
 };
 
 module.exports = {
