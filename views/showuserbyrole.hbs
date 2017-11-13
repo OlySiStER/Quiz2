@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UMS</title>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1><center>Welcome to Users Management System.</center></h1>
+    <br>
+    <center>
+    <a href="/">Insert user.</a> &nbsp
+    <a href="/users"> View user.</a> &nbsp
+    <a href="/users/searchuser">Search user by firstname.</a>  &nbsp
+    <strong>
+    Search user by role.
+    </strong>
+    <br><br>
+
+    <table>
+        <tr>
+            
+            <td><strong>&nbsp Firstname &nbsp</strong></td>
+            <td><strong>&nbsp Lastname &nbsp</strong></td>
+            <td><strong>&nbsp Expired &nbsp</strong></td>
+            <td><strong>&nbsp Role &nbsp</strong></td>
+        </tr>
+        <tr>
+            <td><center>{{item.fname}}</center></td>
+            <td><center>{{item.lname}}</center></td>
+            <td><center>{{item.exp}}</center></td>
+            <td><center>{{item.role}}</center></td>
+        </tr>
+    </table>
+    <br><br>
+    <a href="/users/searchrole">Search agian.</a>
+</body>
+</html>

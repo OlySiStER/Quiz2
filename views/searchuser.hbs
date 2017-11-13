@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UMS</title>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1><center>Welcome to Users Management System.</center></h1>
+    <br>
+    <center>
+    <a href="/">Insert user.</a> &nbsp
+    <a href="/users"> View user.</a> &nbsp
+    <strong>Search user by firstname. &nbsp</strong>
+    <a href="/users/searchrole">Search user by role.</a>
+    <br><br>
+    
+    <form action="/users/search" method="get">
+        Firstname: <input type="text" name="fname" id="fname"> <br><br>
+        <button type="submit" id="btnsubmit">Search</button>
+    </form>
+
+</body>
+</html>

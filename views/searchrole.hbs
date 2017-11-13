@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UMS</title>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1><center>Welcome to Users Management System.</center></h1>
+    <br>
+    <center>
+    <a href="/">Insert user.</a> &nbsp
+    <a href="/users"> View user.</a> &nbsp
+    <a href="/users/searchuser">Search user by firstname.</a>  &nbsp
+    <strong>
+    Search user by role.
+    </strong>
+    <br><br>
+    
+    {{!-- <form action="/users/role/" method="post"> --}}
+        Role: 
+        <select name="srole" id="srole">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select> <br><br>
+        <button type="submit" id="btnsubmit">Search</button>
+
+        <script>
+            $(function(){
+                var searchRole = $('#srole').val();
+                $('#srole').change(function(){
+                    searchRole = $(this).val();
+                });
+
+                $('#btnsubmit').click(function(){
+                    window.location.href = "/users/role/"+searchRole;
+                });
+               
+            });
+        </script>
+    {{!-- </form> --}}
+
+</body>
+</html>

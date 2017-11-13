@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UMS</title>
+</head>
+<body>
+    <h1><center>Welcome to Users Management System.</center></h1>
+    <br>
+    <center>
+    <strong>
+    Insert user. &nbsp
+    </strong>
+    <a href="/users"> View user.</a>  &nbsp
+    <a href="/users/searchuser">Search user by firstname.</a>  &nbsp.
+    <a href="/users/searchrole">Search user by role.</a>
+    <br><br>
+    
+    <form action="/insertuser" method="post">
+        Firstname: <input type="text" name="fname" id="fname"> <br><br>
+        Lastname: <input type="text" name="lname" id="lname"> <br><br>
+        Expired: <input type="text" name="exp" id="exp"> <br><br>
+        Role: 
+        {{!-- <input type="text" name="role" id="role"> <br><br> --}}
+        <select name="role" id="role">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select>
+        <br><br>
+        <button type="submit">Add user</button>
+    </form>
+    </center>
+</body>
+</html>

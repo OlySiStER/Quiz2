@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UMS</title>
+</head>
+<body>
+    <h1><center>Welcome to Users Management System.</center></h1>
+    <br>
+    <center>
+    <a href="/">Insert user.</a> &nbsp
+    <strong>
+    View all user. &nbsp
+    </strong>
+    <a href="/users/searchuser">Search user by firstname.</a>  &nbsp
+    <a href="/users/searchrole">Search user by role.</a>
+    <br><br>
+    <table>
+        <tr>
+            
+            <td><strong>&nbsp Firstname &nbsp</strong></td>
+            <td><strong>&nbsp Lastname &nbsp</strong></td>
+            <td><strong>&nbsp Expired &nbsp</strong></td>
+            <td><strong>&nbsp Role &nbsp</strong></td>
+        </tr>
+    
+    {{#each result}}
+        <tr>
+            <td><center>{{this.fname}}</center></td>
+            <td><center>{{this.lname}}</center></td>
+            <td><center>{{this.exp}}</center></td>
+            <td><center>{{this.role}}</center></td>
+        </tr>
+    {{/each}}
+    </table>
+    </center>
+</body>
+</html>
