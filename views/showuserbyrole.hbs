@@ -30,12 +30,14 @@
             <td><strong>&nbsp Expired &nbsp</strong></td>
             <td><strong>&nbsp Role &nbsp</strong></td>
         </tr>
+        {{#each result}}
         <tr>
-            <td><center>{{item.fname}}</center></td>
-            <td><center>{{item.lname}}</center></td>
-            <td><center>{{item.exp}}</center></td>
-            <td><center>{{item.role}}</center></td>
+            <td><center>{{this.fname}}</center></td>
+            <td><center>{{this.lname}}</center></td>
+            <td><center>{{this.exp}}</center></td>
+            <td><center>{{this.role}}</center></td>
         </tr>
+        {{/each}}
     </table>
     <br><br>
     <a href="/users/searchrole">Search agian.</a>

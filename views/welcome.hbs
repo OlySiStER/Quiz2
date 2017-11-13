@@ -19,9 +19,16 @@
     <br><br>
     
     <form action="/insertuser" method="post">
+        ID: <input type="text" name="id" id="id"> <br><br>
         Firstname: <input type="text" name="fname" id="fname"> <br><br>
         Lastname: <input type="text" name="lname" id="lname"> <br><br>
-        Expired: <input type="text" name="exp" id="exp"> <br><br>
+        Expired: 
+        <select name="exp" id="exp">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select>
+        {{!-- <input type="text" name="exp" id="exp">  --}}
+        <br><br>
         Role: 
         {{!-- <input type="text" name="role" id="role"> <br><br> --}}
         <select name="role" id="role">

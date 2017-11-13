@@ -32,6 +32,6 @@ app.get('/users/searchrole', function (req, res) {
 app.post('/insertuser', user.insert);
 app.get('/users', user.findAll);
 app.get('/users/search', user.findByFname);
-app.get('/users/role/:role', user.findByRole);
+app.get('/user/role/:role', user.findByRole);
 
 app.listen(3000, () => console.log('Server is running at http://localhost:3000'));

@@ -27,39 +27,61 @@ function findAll(req, res) {
     var query = {};
     db.collection("users").find(query).toArray(function (err, result) {
         if (err) throw err;
-        res.json(result);
-        // res.render('viewuser.hbs', {
-        //     result: result
-        // });
+        // res.json(result);
+        res.render('viewuser.hbs', {
+            result: result
+        });
     });
 };
 
 function findByFname(req, res) {
-    db.collection("users")
-        .findOne({
-                'fname': req.query.fname
-            },
-            function (err, item) {
-                res.send(item);
-                // console.log(item);
-                // res.render('showuser.hbs', {
-                //     item: item
-                // });
-            });
+    var query = {
+        fname: req.query.fname
+    };
+    console.log(query);
+    db.collection("users").find(query).toArray(function (err, result) {
+        if (err) throw err;
+        // res.json(result);
+        res.render('showuser.hbs', {
+            result: result
+        });
+    });
+    // db.collection("users")
+    //     .find({
+    //             'fname': req.query.fname
+    //         },
+    //         function (err, item) {
+    //             // res.send(item);
+    //             console.log(item);
+    //             res.render('showuser.hbs', {
+    //                 item: item
+    //             });
+    //         });
 };
 
 function findByRole(req, res) {
-    db.collection("users")
-        .findOne({
-                'role': req.params.role
-            },
-            function (err, item) {
-                res.send(item);
-                // console.log(item);
-                // res.render('showuserbyrole.hbs', {
-                //     item: item
-                // });
-            });
+    var query = {
+        role: req.params.role
+    };
+    console.log(query);
+    db.collection("users").find(query).toArray(function (err, result) {
+        if (err) throw err;
+        // res.json(result);
+        res.render('showuserbyrole.hbs', {
+            result: result
+        });
+    });
+    // db.collection("users")
+    //     .findOne({
+    //             'role': req.params.role
+    //         },
+    //         function (err, item) {
+    //             // res.send(item);
+    //             // console.log(item);
+    //             res.render('showuserbyrole.hbs', {
+    //                 item: item
+    //             });
+    //         });
 };
 
 module.exports = {
