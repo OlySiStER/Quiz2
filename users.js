@@ -27,12 +27,12 @@ function findAll(req, res) {
     var query = {};
     db.collection("users").find(query).toArray(function (err, result) {
         if (err) throw err;
-
-        res.render('viewuser.hbs', {
-            result: result
-        });
+        res.json(result);
+        // res.render('viewuser.hbs', {
+        //     result: result
+        // });
     });
-}
+};
 
 function findByFname(req, res) {
     db.collection("users")
@@ -40,10 +40,11 @@ function findByFname(req, res) {
                 'fname': req.query.fname
             },
             function (err, item) {
-                console.log(item);
-                res.render('showuser.hbs', {
-                    item: item
-                })
+                res.send(item);
+                // console.log(item);
+                // res.render('showuser.hbs', {
+                //     item: item
+                // });
             });
 };
 
@@ -53,10 +54,11 @@ function findByRole(req, res) {
                 'role': req.params.role
             },
             function (err, item) {
-                console.log(item);
-                res.render('showuserbyrole.hbs', {
-                    item: item
-                })
+                res.send(item);
+                // console.log(item);
+                // res.render('showuserbyrole.hbs', {
+                //     item: item
+                // });
             });
 };
 
