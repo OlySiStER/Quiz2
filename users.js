@@ -11,6 +11,7 @@ MongoClient.connect(url, function (err, database) {
 
 function insert(req, res) {
     var newUser = {
+        id: req.body.id,
         fname: req.body.fname,
         lname: req.body.lname,
         exp: req.body.exp,
@@ -27,10 +28,10 @@ function findAll(req, res) {
     var query = {};
     db.collection("users").find(query).toArray(function (err, result) {
         if (err) throw err;
-        // res.json(result);
-        res.render('viewuser.hbs', {
-            result: result
-        });
+        res.json(result);
+        // res.render('viewuser.hbs', {
+        //     result: result
+        // });
     });
 };
 
@@ -41,10 +42,10 @@ function findByFname(req, res) {
     console.log(query);
     db.collection("users").find(query).toArray(function (err, result) {
         if (err) throw err;
-        // res.json(result);
-        res.render('showuser.hbs', {
-            result: result
-        });
+        res.json(result);
+        // res.render('showuser.hbs', {
+        //     result: result
+        // });
     });
     // db.collection("users")
     //     .find({
@@ -66,10 +67,10 @@ function findByRole(req, res) {
     console.log(query);
     db.collection("users").find(query).toArray(function (err, result) {
         if (err) throw err;
-        // res.json(result);
-        res.render('showuserbyrole.hbs', {
-            result: result
-        });
+        res.json(result);
+        // res.render('showuserbyrole.hbs', {
+        //     result: result
+        // });
     });
     // db.collection("users")
     //     .findOne({
